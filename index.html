@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+        .headline {
+            width: 45%;
+            text-align: center;
+        }
+        .headline img, .headline video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .headline p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Robotics Perception Final Project Demonstration</div>
+
+    <div class="container">
+        <div class="headline">
+            <h2>Visual Multi-Object Tracking Using Event Camera Frames</h2>
+            <p>This part demonstrates the results of visual tracking based on Kalman filter estimation for future visual motion for objects. The video demonstration consists of four sections. The first section (Section A) presents the current observed motion from the simulated dynamic event camera frame. Section B shows the corresponding RGB frame captured by a regular RGB camera. The third section (Section C) shows the cosine distance error between the estimated visual motion and the observed one from the event camera. The histogram shown in this section presents the error between the estimation features and the captured visual motion. Section D shows the currently extracted visual motion features. Both C and D sections present estimation and features for the white van car with ID 0. </p>
+            <img src="images/part_a_img.jpg" alt="Left Headline Image">
+            <video controls>
+                <source src="videos/dvs.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="headline">
+            <h2>Quality Assessment for Manually Annotated Data</h2>
+            <p>This part demonstrates the results of the quality assessment for manually annotated data. The goal is to locate potential annotation faults in detection, classification, localization, and tracking. The video displays three different scenarios. The first scenario highlights potential miss-labeled objects in the annotation. The second scenario highlights the localization precision of the annotation. Lastly, the last part highlights tracks that potentially have inconsistency tracking annotation. </p>
+            <video controls>
+                <source src="videos/annotation_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>
